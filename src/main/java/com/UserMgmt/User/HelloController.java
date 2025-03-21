@@ -25,6 +25,7 @@ public class HelloController {
 	public void msg()
 	{
 		System.out.println("Welcome");
+		System.out.println("DataType is : " + Constants.DATA_TYPE);
 		
 	}
 
