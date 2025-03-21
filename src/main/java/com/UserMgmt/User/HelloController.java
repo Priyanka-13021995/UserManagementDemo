@@ -20,6 +20,13 @@ public class HelloController {
 
 	@Autowired
     private UserService userService;
+	
+	@GetMapping("/getMsg")
+	public void msg()
+	{
+		System.out.println("Welcome");
+		
+	}
 
     @PostMapping("/create")
     public ResponseEntity<user> createUser(@RequestBody user user) {
