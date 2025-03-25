@@ -28,6 +28,15 @@ public class HelloController {
 		System.out.println("DataType is : " + Constants.DATA_TYPE);
 		
 	}
+	
+	@GetMapping("/getUser")
+	public String msg1(@RequestBody Order order)
+	{
+		System.out.println("Welcome");
+		System.out.println("user Name is : " + order.getUser() + "User Password is :" + order.getPassword() );
+		return "user Name is : " + order.getUser() + "User Password is :" + order.getPassword();
+		
+	}
 
     @PostMapping("/create")
     public ResponseEntity<user> createUser(@RequestBody user user) {
